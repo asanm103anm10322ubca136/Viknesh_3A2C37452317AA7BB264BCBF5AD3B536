@@ -1,24 +1,10 @@
-class player:
-
-  def play(self):
-    print("The player is playing cricket")
-
-
-class Batsman:
-
-  def play(self):
-    print("The batsman is batting")
-
-
-class Bowler:
-
-  def play(self):
-    print("The Bowler is bowling")
-
-
-playerobj = player()
-Batsmanobj = Batsman()
-Bowlerobj = Bowler()
-playerobj.play()
-Batsmanobj.play()
-Bowlerobj.play()
+def get_indices(element, lst):
+    indices = []
+    for i in range(len(lst)):
+        if lst[i] == element:
+            indices.append(i)
+    return indices
+my_list = [3, 5, 2, 3, 8, 3, 1]
+element = 3
+indices = get_indices(element, my_list)
+print(indices)
