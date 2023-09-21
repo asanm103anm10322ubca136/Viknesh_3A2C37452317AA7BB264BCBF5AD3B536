@@ -1,26 +1,17 @@
-class Bank_Account:
-    def __init__(self, account_number, account_name, account_balance):  
-      self.__account_number = account_number
-      self.__account_name = account_name
-      self.__account_balance = account_balance
-    def deposit (self,amount):
-      if  amount > 0 :
-        self.__account_balance += amount
-        print(f"deposited:₹{amount}.currently balance:₹{self.__account_balance}")
-      else:
-        print("Invaial deposit amount")
-    def withdraw (self,amount):
-      if amount > 0 and amount<=self.__account_balance :
-        self.__account_balance -= amount
-        print(f"withdraw:₹{amount}.currently balance:₹{self.__account_balance}")
-      else:
-        print("Invalid withdraw amount")
-        
-    def display (self):
-     print( f'account_balance of { self.__account_name }Rs.{ self.__account_balance}')
-account=Bank_Account(123456,"test",500)
-account.deposit(1000)
-account.withdraw(300)
-account.display() 
-        
-  
+def myFunc(e):
+  return e['CGPA']
+def sort_students(list):
+    list.sort(key=myFunc,reverse=True)
+    print(list)
+
+    
+students = [
+  {'name': 'X', 'rollNo':'001','CGPA': 86.9},
+  {'name': 'Y','roolNo':'002', 'CGPA': 55.6},
+  {'name': 'Z', 'rollNo':'003','CGPA': 90.01},
+  {'name': 'A', 'rollNo':'004', 'CGPA': 60.78}
+]
+students.append({'name':'B','rollNo':'005','CGPA':76.43})
+
+
+sort_students(students)
